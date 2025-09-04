@@ -1298,7 +1298,401 @@ nolink "false"
  
 \end_layout
 
+\begin_layout Section
+Universal properties 
+\end_layout
+
 \begin_layout Standard
+
+\series bold
+Theorem 4.1
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-4.1"
+
+\end_inset
+
+:
+ 
+\series default
+Let 
+\begin_inset Formula $I$
+\end_inset
+
+ be a two sided ideal of a ring 
+\begin_inset Formula $R$
+\end_inset
+
+.
+ Then for everyring homomorphism 
+\begin_inset Formula $\varphi:R\to S$
+\end_inset
+
+ such that 
+\begin_inset Formula $I\subseteq\ker\varphi$
+\end_inset
+
+,
+ there 
+\begin_inset Formula $\exists!\tilde{\varphi}:R/I\to S$
+\end_inset
+
+ such that the following diagram commutes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	R &&&& S 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&& {R/I}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+varphi }"{description},
+ from=1-1,
+ to=1-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+pi }"{description},
+ from=1-1,
+ to=3-3]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+tilde{
+\backslash
+varphi }}"{description},
+ from=3-3,
+ to=1-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A note on the proof of the theorem.
+ The proof seems to be just a repition of propositions already proven,
+ we define 
+\begin_inset Formula $\forall a+I\in R/I:\tilde{\varphi}(a+I):=\varphi(a)$
+\end_inset
+
+.
+ We know that the morphism is well defined because if 
+\begin_inset Formula $a+I=b+I$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $a-b\in I$
+\end_inset
+
+ and hence 
+\begin_inset Formula $\varphi(a-b)=0$
+\end_inset
+
+ and since 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a ring homomorphism,
+ we get that 
+\begin_inset Formula $\varphi(a)=\varphi(b)$
+\end_inset
+
+ which implies that 
+\begin_inset Formula $\tilde{\varphi}(a+I)=\tilde{\varphi}(b+I)$
+\end_inset
+
+.
+ The fact that 
+\begin_inset Formula $\tilde{\varphi}$
+\end_inset
+
+ is a ring homomorphims directly comes from the fact that 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a ring homomorphism.
+ Thus the proof is skipped in the notes 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Theorem 4.2
+\begin_inset CommandInset label
+LatexCommand label
+name "Theorem-4.2"
+
+\end_inset
+
+:
+ 
+\series default
+Every ring homomorphims 
+\begin_inset Formula $\varphi:R\to S$
+\end_inset
+
+ may be decomposed as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	R && {R/
+\backslash
+ker 
+\backslash
+varphi} && {
+\backslash
+text{im } 
+\backslash
+varphi} && S
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+pi }"{description},
+ two heads,
+ from=1-1,
+ to=1-3]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow[bend left=24pt,
+ from=1-1,
+ to=1-7]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+tilde{
+\backslash
+varphi}}"{description},
+ from=1-3,
+ to=1-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["i"{description},
+ hook,
+ from=1-5,
+ to=1-7]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\pi$
+\end_inset
+
+ is the projection homomorphim,
+ 
+\begin_inset Formula $\tilde{\varphi}$
+\end_inset
+
+ is an isomorphism of rings and 
+\begin_inset Formula $i$
+\end_inset
+
+ is an inclusion morphism.
+ 
+\end_layout
+
+\begin_layout Standard
+Note on the proof of the theorem:
+ we already know that 
+\begin_inset Formula $\ker\varphi$
+\end_inset
+
+ is an ideal in 
+\begin_inset Formula $R$
+\end_inset
+
+ (
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Proposition-2.3"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+),
+ and we know that 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ with the range restricted to just the image still remains a ring homomorphims,
+ thus we know that there exists a ring homomorphism between 
+\begin_inset Formula $R/\ker\varphi$
+\end_inset
+
+ and 
+\begin_inset Formula $\text{im }\varphi$
+\end_inset
+
+.
+ It has an isomorphism by the same logic as we proved an analougus theorem for the category SET.
+ hence there is nothing explicit to prove here.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Corollary 4.3
+\begin_inset CommandInset label
+LatexCommand label
+name "Corollary-4.3"
+
+\end_inset
+
+:
+ 
+\series default
+Suppose 
+\begin_inset Formula $\varphi:R\to S$
+\end_inset
+
+ is a surjective homomorphism,
+ Then
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+S\cong\frac{R}{\ker\varphi}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof:
+ 
+\series default
+Follows directly from 
+\begin_inset CommandInset ref
+LatexCommand labelonly
+reference "Theorem-4.2"
+plural "false"
+caps "false"
+noprefix "false"
+nolink "false"
+
+\end_inset
+
+ by putting 
+\begin_inset Formula $\text{im }\varphi=S$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
 
 \end_layout
 
