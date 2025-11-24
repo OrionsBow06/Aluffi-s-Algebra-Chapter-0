@@ -426,12 +426,12 @@ A two sided ideal is a sungroup
 note:
  
 \series default
-Ideals are close to beig subrings,
- they are subgroups and are closed with repsect to multiplication but teh inly ideal if ring 
+Ideals are close to being subrings,
+ they are subgroups and are closed with repsect to multiplication but the only ideal of ring 
 \begin_inset Formula $R$
 \end_inset
 
- conatining 
+ containing 
 \begin_inset Formula $1_{R}$
 \end_inset
 
@@ -996,7 +996,7 @@ thus we get that
 \end_inset
 
 .
- It is alos to be noted that 
+ It is also to be noted that 
 \begin_inset Formula $a"b"-a'b'=a"b"-a'b"+a'b"-a'b'=b"(a"-a')+a'(b"-b')$
 \end_inset
 
@@ -1010,7 +1010,7 @@ thus we get that
 \end_inset
 
  is an ideal,
- we get taht 
+ we get that 
 \begin_inset Formula $b"(a"-a')\in I$
 \end_inset
 
@@ -1025,7 +1025,7 @@ thus we get that
 \end_inset
 
  is an ideal,
- we get taht 
+ we get that 
 \begin_inset Formula $a'(b"-b')\in I$
 \end_inset
 

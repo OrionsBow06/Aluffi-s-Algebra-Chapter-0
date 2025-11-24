@@ -134,7 +134,7 @@ are rings,
 \begin_inset Formula $\varphi:R\to S$
 \end_inset
 
- is a ring homomporphism if it preserves bith operations and the identity element,
+ is a ring homomporphism if it preserves both operations and the identity element,
  i.e.
  
 \end_layout
@@ -412,7 +412,7 @@ and also note that
 \end_inset
 
  is a ring homomorphism.
- It is unique since it is determined by teh requirment that 
+ It is unique since it is determined by the requirment that 
 \begin_inset Formula $\varphi(1)=1$
 \end_inset
 
@@ -1253,7 +1253,7 @@ nolink "false"
 \end_inset
 
  or any other permutation.
- It is also to be notes that such an 
+ It is also to be noted that such an 
 \begin_inset Formula $s$
 \end_inset
 
@@ -1441,7 +1441,7 @@ Proof:
 \begin_inset Formula $\varphi:R\to S$
 \end_inset
 
- ia a monomorphims and 
+ is a monomorphism and 
 \begin_inset Formula $r\in\ker\varphi$
 \end_inset
 
@@ -2072,7 +2072,7 @@ Since we extended the direct product in groups
 \end_inset
 
  with an extra binary operation,
- we just have to check that all the morphisms as defined in the dorect product of Grp also respect the new binary operation added.
+ we just have to check that all the morphisms as defined in the direct product of Grp also respect the new binary operation added.
  We first of all review the functions defined using the following commutativ diagrams:
  the first diagram shows the structure of the product as defined in Grp
 \end_layout
@@ -2364,7 +2364,7 @@ First we check if
 
  is a ring homomorphism i.e.
  it also respects the new multiplication operation defined.
- (it already respects teh addition operation becaus 
+ (it already respects the addition operation becaus 
 \begin_inset Formula $(R_{i},+)$
 \end_inset
 
@@ -2573,7 +2573,7 @@ name "Proposition-5.1"
 Proof:
  
 \series default
-Consider teh function 
+Consider the function 
 \begin_inset Formula $\varphi:\text{End}_{\text{Ab}}(\mathbb{Z})\to\mathbb{Z}$
 \end_inset
 
@@ -2607,7 +2607,7 @@ Now we want to show that that
 \end_inset
 
  is a ring homomorphism,
- Then consider teh following argument:
+ Then consider the following argument:
  
 \begin_inset Formula $\forall\alpha,\beta\in\text{End}_{\text{Ab}}(\mathbb{Z})$
 \end_inset

@@ -1,0 +1,1910 @@
+#LyX 2.4 created this file. For more info see https://www.lyx.org/
+\lyxformat 620
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children no
+\language canadian
+\language_package default
+\inputencoding utf8
+\fontencoding auto
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_roman_osf false
+\font_sans_osf false
+\font_typewriter_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement class
+\float_alignment class
+\paperfontsize default
+\spacing onehalf
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_formatted_ref 0
+\use_minted 0
+\use_lineno 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tablestyle default
+\tracking_changes false
+\output_changes false
+\change_bars false
+\postpone_fragile_content true
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\docbook_table_output 0
+\docbook_mathml_prefix 1
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Modules over a Ring
+\end_layout
+
+\begin_layout Author
+Karan Chauhan
+\end_layout
+
+\begin_layout Date
+2025-09-04
+\end_layout
+
+\begin_layout Section
+Definition of 
+\begin_inset Formula $R-$
+\end_inset
+
+mod
+\end_layout
+
+\begin_layout Standard
+We recall that if 
+\begin_inset Formula $M$
+\end_inset
+
+ is an abelian group then 
+\begin_inset Formula $\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ is a ring in a natural way (composition and addition).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 1.1:
+ 
+\series default
+A action of a ring 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ ia simply a homomorphism of rings 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma:R\to\text{End}_{\text{Ab}}(M)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We will say that 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ makes 
+\begin_inset Formula $M$
+\end_inset
+
+ into a 
+\begin_inset Formula $R-$
+\end_inset
+
+module.
+ 
+\end_layout
+
+\begin_layout Standard
+We fix a ring 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\forall M\in\text{Obj}(\text{Ab})$
+\end_inset
+
+,
+ we consider the function of the form 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho:R\times M\to M
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+such that 
+\begin_inset Formula $\forall r,s\in R,\forall m,n\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r,m+n)=\rho(r,m)+\rho(r,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r+s,m)=\rho(r,m)+\rho(s,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(rs,m)=\rho\left(r,\rho(s,m)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(1_{R},m)=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+We claim that given sich a function 
+\begin_inset Formula $\rho$
+\end_inset
+
+,
+ we canonically define an action of the ring 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+ and every action 
+\begin_inset Formula $\sigma:R\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ defines such a function 
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ Thus we prove the claim 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim 1.2:
+ 
+\series default
+Given an abelian group 
+\begin_inset Formula $M$
+\end_inset
+
+ and a ring 
+\begin_inset Formula $R$
+\end_inset
+
+,
+ any function 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ such that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\forall r,s\in R,\forall m,n\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r,m+n)=\rho(r,m)+\rho(r,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r+s,m)=\rho(r,m)+\rho(s,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(rs,m)=\rho\left(r,\rho(s,m)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(1_{R},m)=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+defines a action of 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $M$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof:
+ 
+\series default
+Given 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+,
+ we define 
+\begin_inset Formula $\sigma:R\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ as,
+ 
+\begin_inset Formula $\forall r\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma:r\to\sigma_{r}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\sigma_{r}$
+\end_inset
+
+ is the group homomorphism such that 
+\begin_inset Formula $\forall m\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{r}(m)=\rho(r,m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we check that 
+\begin_inset Formula $\forall r\in R,\sigma_{r}\in\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ i.e.
+ 
+\begin_inset Formula $\sigma_{r}$
+\end_inset
+
+ is a group homomorphism.
+ Thus consider 
+\begin_inset Formula $\forall m,n\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{r}(m+n)=\rho(r,m+n)=\rho(r,m)+\rho(r,n)=\sigma_{r}(m)+\sigma_{r}(n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus 
+\begin_inset Formula $\sigma_{r}(m+n)=\sigma_{r}(m)+\sigma_{r}(n)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\forall r\in R,\sigma_{r}\in\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Now we check that 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a ring homomorphism.
+ Thus 
+\begin_inset Formula $\forall r,s\in R$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $\sigma(r)=\sigma_{r},\sigma(s)=\sigma_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma(r+s)=\sigma_{r+s}$
+\end_inset
+
+.
+ Thus we want to show that 
+\begin_inset Formula $\sigma_{r+s}=\sigma_{r}+\sigma_{s}$
+\end_inset
+
+.
+ Thus consider 
+\begin_inset Formula $\forall m\in M,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{r+s}(m)=\rho(r+s,m)=\rho(r,m)+\rho(s,m)=\sigma_{r}(m)+\sigma_{s}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence 
+\begin_inset Formula $\sigma_{r+s}(m)=\sigma_{r}(m)+\sigma_{s}(m)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\sigma_{r+s}=\sigma_{r}+\sigma_{s}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now consider 
+\begin_inset Formula $\forall r,s\in R$
+\end_inset
+
+,
+ let 
+\begin_inset Formula $\sigma(r)=\sigma_{r},\sigma(s)=\sigma_{s}$
+\end_inset
+
+ and 
+\begin_inset Formula $\sigma(rs)=\sigma_{rs}$
+\end_inset
+
+.
+ Thus we want to show that 
+\begin_inset Formula $\sigma_{rs}=\sigma_{r}\circ\sigma_{s}$
+\end_inset
+
+.
+ Thus consider 
+\begin_inset Formula $\forall m\in M,$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{rs}(m)=\rho(rs,m)=\rho(r,\rho(s,m))=\rho(r,\sigma_{s}(m))=\sigma_{r}\circ\sigma_{s}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence 
+\begin_inset Formula $\sigma_{rs}(m)=\sigma_{r}\circ\sigma_{s}(m)$
+\end_inset
+
+.
+ Therefore 
+\begin_inset Formula $\sigma_{rs}=\sigma_{r}\circ\sigma_{s}.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we prove that 
+\begin_inset Formula $\sigma(1_{R})=id_{M}$
+\end_inset
+
+,
+ thus suppose 
+\begin_inset Formula $\sigma(1_{R})=\sigma_{1}$
+\end_inset
+
+,
+ then 
+\begin_inset Formula $\forall m\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{1}(m)=\rho(1,m)=m=id_{M}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Therefore 
+\begin_inset Formula $\sigma$
+\end_inset
+
+is a ring homomorphism from 
+\begin_inset Formula $R\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+,
+ thus showing that 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is an action,
+ hence proving the claim.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Claim 1.3:
+ 
+\series default
+Given an action 
+\begin_inset Formula $\sigma:R\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+,
+ it defines 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ such that 
+\begin_inset Formula $\forall r,s\in R,\forall m,n\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r,m+n)=\rho(r,m)+\rho(r,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r+s,m)=\rho(r,m)+\rho(s,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(rs,m)=\rho\left(r,\rho(s,m)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(1_{R},m)=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof:
+ 
+\series default
+We define 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ as 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall r\in R,m\in M:\rho(r,m):=\sigma_{r}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Now we show that such a 
+\begin_inset Formula $\rho$
+\end_inset
+
+ follows the stated properties,
+ hence 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall m,n\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(r,m+n)=\sigma_{r}(m+n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\sigma_{r}$
+\end_inset
+
+ is a group homomorphism
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{r}(m+n)=\sigma_{r}(m)+\sigma_{r}(n)=\rho(r,m)+\rho(r,n)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall r,s\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(r+s,m)=\sigma_{r+s}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a ring homomorphism,
+ we get that 
+\begin_inset Formula $\sigma_{r+s}=\sigma_{r}+\sigma_{s},$
+\end_inset
+
+thus 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{r+s}(m)=\sigma_{r}(m)+\sigma_{s}(m)=\rho(r,m)+\rho(s,m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall r,s\in R$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(rs,m)=\sigma_{rs}(m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a ring homomoprhism,
+ we get that 
+\begin_inset Formula $\sigma_{rs}=\sigma_{r}\circ\sigma_{s},$
+\end_inset
+
+hecne 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sigma_{rs}(m)=\sigma_{r}\circ\sigma_{s}(m)=\sigma_{r}\circ\rho(s,m)=\rho(r,\rho(s,m))
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+We get that 
+\begin_inset Formula $\rho(1_{R},m)=\sigma_{1}(m)$
+\end_inset
+
+,
+ since 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ is a ring homomorphism 
+\begin_inset Formula $\sigma(1_{R})=\sigma_{1}=id_{M}$
+\end_inset
+
+,
+ thus 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(1_{R},m)=\sigma_{1}(m)=id_{M}(m)=m
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we have shown that 
+\begin_inset Formula $\sigma:R\to\text{End}_{\text{Ab}}(M),$
+\end_inset
+
+defines 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ with the stated property 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Thus we have seen that a ring action 
+\begin_inset Formula $\sigma:R\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ and a function 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ with the stated property and hence are equivalent 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 1.4:
+ 
+\series default
+A 
+\begin_inset Formula $R-$
+\end_inset
+
+module structure on an abelian group 
+\begin_inset Formula $M$
+\end_inset
+
+ consists of a map 
+\begin_inset Formula $\rho:R\times M\to M$
+\end_inset
+
+ that follows the properties 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r,m+n)=\rho(r,m)+\rho(r,n)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(r+s,m)=\rho(r,m)+\rho(s,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(rs,m)=\rho\left(r,\rho(s,m)\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\rho(1_{R},m)=m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 1.5:
+ 
+\series default
+The map 
+\begin_inset Formula $\rho$
+\end_inset
+
+ of 
+\begin_inset Formula $R-$
+\end_inset
+
+module,
+ follows the following properties 
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall m\in M:\rho(0,m)=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $\forall m\in M:\rho(-1,m)=-\rho(1,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof:
+ 1) 
+\series default
+
+\begin_inset Formula 
+\[
+\rho(0,m)=\rho(0+0,m)=\rho(0,m)+\rho(0,m)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+which implies that 
+\begin_inset Formula $\rho(0,m)=0$
+\end_inset
+
+.
+ 
+\begin_inset Formula $\square$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+2) 
+\series default
+Consider 
+\begin_inset Formula $\forall m\in M$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(1,m)+\rho(-1,m)=\rho(1-1,m)=\rho(0,m)=0
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thus 
+\begin_inset Formula $\rho(-1,m)=-\rho(1,m)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+The category 
+\begin_inset Formula $R-$
+\end_inset
+
+mod
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proposition 2.1:
+ 
+\series default
+Every abelain group is a 
+\begin_inset Formula $\mathbb{Z}-$
+\end_inset
+
+module in exactly one way 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Proof:
+ 
+\series default
+We are looking at 
+\begin_inset Formula $\mathbb{Z}-$
+\end_inset
+
+module structure,
+ hence we are looking for a morphism 
+\begin_inset Formula $\sigma:\mathbb{Z}\to\text{End}_{\text{Ab}}(M)$
+\end_inset
+
+ for any abelian group 
+\begin_inset Formula $M$
+\end_inset
+
+,
+ w eknow such a 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ exists because 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is initial in 
+\begin_inset Formula $RING$
+\end_inset
+
+.
+ It is unique because 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is initial in 
+\begin_inset Formula $RING$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 2.2:
+ 
+\series default
+A homomorphism of 
+\begin_inset Formula $R$
+\end_inset
+
+-modules is a group homomorphism which is compatible with the module structure i.e.
+ if 
+\begin_inset Formula $M,N$
+\end_inset
+
+ are 
+\begin_inset Formula $R-$
+\end_inset
+
+modules and 
+\begin_inset Formula $\varphi:M\to N$
+\end_inset
+
+ is a function,
+ 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a homomorphism of 
+\begin_inset Formula $R-$
+\end_inset
+
+modules if and only if 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall m_{1},m_{2}\in M:\varphi(m_{1}+m_{2})=\varphi(m_{1})+\varphi(m_{2})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\forall r\in R,\forall m\in M:\varphi(\rho(r,m))=\rho'(r,\varphi(m))$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+i.e.
+ the following diagram commutes 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{R
+\backslash
+times M} &&&& {R
+\backslash
+times N} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	M &&&& N
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{id
+\backslash
+times 
+\backslash
+varphi }",
+ from=1-1,
+ to=1-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["
+\backslash
+rho"',
+ from=1-1,
+ to=5-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+rho'}",
+ from=1-5,
+ to=5-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+varphi }"',
+ from=5-1,
+ to=5-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example 2.3:
+ 
+\series default
+The category 
+\begin_inset Formula $\mathbb{Z}-$
+\end_inset
+
+mod is 
+\begin_inset Quotes eld
+\end_inset
+
+the same as
+\begin_inset Quotes erd
+\end_inset
+
+ the category Ab i.e.
+ every abelian group is a 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+module in exactly one way and 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+module homomorphisms are just group homomorphisms.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example 2.4:
+ 
+\series default
+If 
+\begin_inset Formula $R=k$
+\end_inset
+
+ is a fieldm 
+\begin_inset Formula $R-$
+\end_inset
+
+modules are called 
+\begin_inset Formula $k-$
+\end_inset
+
+vector spces.
+ we will call the category of vector spaces over a field 
+\begin_inset Formula $k$
+\end_inset
+
+ as 
+\begin_inset Quotes eld
+\end_inset
+
+k-vect
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Morphisms in k-vect are often called linear maps.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Example 2.5:
+ 
+\series default
+Consider ring homomorphism 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\alpha:R\to S
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+thus we degine a 
+\begin_inset Formula $R-$
+\end_inset
+
+module as 
+\begin_inset Formula $(S,\rho)$
+\end_inset
+
+ where 
+\begin_inset Formula $\rho:R\times S\to S$
+\end_inset
+
+ is an action of 
+\begin_inset Formula $R$
+\end_inset
+
+ on 
+\begin_inset Formula $S$
+\end_inset
+
+ defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\forall r\in R,\forall s\in S:\rho(r,s)=\alpha(r)\cdot s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To take this further,
+ suppose 
+\begin_inset Formula $R$
+\end_inset
+
+ is commutative and 
+\begin_inset Formula $\forall r\in R,\forall s\in S:$
+\end_inset
+
+ 
+\begin_inset Formula $\alpha(r)$
+\end_inset
+
+ and 
+\begin_inset Formula $s$
+\end_inset
+
+ commutes,
+ then the two actions 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(r,s)=\alpha(r)\cdot s
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+and
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho'(r,s)=s\cdot\alpha(r)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+are in fact the same action.
+ In such a case 
+\begin_inset Formula $\forall r_{1},r_{2}\in R,\forall s_{1},s_{2}\in S$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(r_{1},s_{1})\cdot\rho(r_{2},s_{2})=\rho(r_{1}r_{2},s_{1}s_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\rho(r_{1},s_{1})\cdot\rho(r_{2},s_{2})=\alpha(r_{1})s_{1}\cdot\alpha(r_{2})s_{2}=\alpha(r_{1})\alpha(r_{2})s_{1}s_{2}=\alpha(r_{1}r_{2})s_{1}s_{2}=\rho(r_{1}r_{2},s_{1}s_{2})
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is supposed to be 
+\begin_inset Quotes eld
+\end_inset
+
+important
+\begin_inset Quotes erd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 2.6:
+ 
+\series default
+Let 
+\begin_inset Formula $R$
+\end_inset
+
+ be a commutative ring.
+ An 
+\begin_inset Formula $R-$
+\end_inset
+
+algebra is a ring homomorphism 
+\begin_inset Formula $\alpha:R\to S$
+\end_inset
+
+ such that 
+\begin_inset Formula $\alpha(R)$
+\end_inset
+
+ is contained in the center of 
+\begin_inset Formula $S$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+due to abuse of languae,
+ an 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra 
+\begin_inset Quotes eld
+\end_inset
+
+is
+\begin_inset Quotes erd
+\end_inset
+
+ an 
+\begin_inset Formula $R$
+\end_inset
+
+-module 
+\begin_inset Formula $S$
+\end_inset
+
+ with a compatible ring structure.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 2.7:
+ 
+\series default
+An 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra 
+\begin_inset Formula $S$
+\end_inset
+
+ is a divison algebra is 
+\begin_inset Formula $S$
+\end_inset
+
+ is a divison ring.
+ 
+\end_layout
+
+\begin_layout Standard
+Hence we define the category 
+\begin_inset Formula $R$
+\end_inset
+
+-Alg
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Definition 2.8:
+ 
+\series default
+We define the category 
+\begin_inset Formula $R$
+\end_inset
+
+-Alg to contain all the ordered pairs 
+\begin_inset Formula $(S,\alpha)$
+\end_inset
+
+where 
+\begin_inset Formula $S$
+\end_inset
+
+ is a ring and 
+\begin_inset Formula $\alpha:R\to S$
+\end_inset
+
+ is an 
+\begin_inset Formula $R$
+\end_inset
+
+-algebra.
+ The morphisms for this category would be all the ring homomorphisms auch that they respect the mosule structre i.e.
+ the following commute 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	&& R 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	S &&&& T
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+alpha }",
+ from=1-3,
+ to=3-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+beta }"',
+ from=1-3,
+ to=3-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["
+\backslash
+varphi",
+ from=3-1,
+ to=3-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{R
+\backslash
+times S} &&&& {R
+\backslash
+times T} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	S &&&& T
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{id
+\backslash
+times 
+\backslash
+varphi }",
+ from=1-1,
+ to=1-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+rho }"',
+ from=1-1,
+ to=4-1]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+rho '}",
+ from=1-5,
+ to=4-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["{
+\backslash
+varphi }"',
+ from=4-1,
+ to=4-5]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Question 2.9:
+ 
+\series default
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+-Alg is just another name for 
+\begin_inset Formula $RING$
+\end_inset
+
+ ?
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Answer:
+ 
+\series default
+because 
+\begin_inset Formula $\forall(S,\alpha)\in\text{Obj}(\mathbb{Z}-\text{Alg})$
+\end_inset
+
+,
+ we get that 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ is uniquely determined by 
+\begin_inset Formula $S$
+\end_inset
+
+ as 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset
+
+ is initial in 
+\begin_inset Formula $RING$
+\end_inset
+
+,
+ thus considering that the following diagram commutes
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+[
+\backslash
+begin{tikzcd}
+\end_layout
+
+\begin_layout Plain Layout
+
+	&&& T 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+mathbb{Z}} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+	&&& S
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["
+\backslash
+beta"',
+ from=2-1,
+ to=1-4]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["
+\backslash
+alpha",
+ from=2-1,
+ to=3-4]
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+arrow["
+\backslash
+varphi",
+ from=3-4,
+ to=1-4]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{tikzcd}
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ is a morphism of 
+\begin_inset Formula $R$
+\end_inset
+
+-mod ,
+ hence we get that 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\varphi\left(\alpha(n)\cdot s\right)=\varphi(\alpha(n))\cdot\varphi(s)=\beta(n)\cdot\varphi(s)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
